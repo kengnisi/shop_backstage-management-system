@@ -15,6 +15,18 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+// 注册全局API
+import API from '@/api'
+Vue.prototype.$API = API
+// 注册全局组件CategorySelect
+import CategorySelect from '@/components/CategorySelect'
+Vue.component(CategorySelect.name, CategorySelect)
+// 按钮提示信息组件
+import HintButton from '@/components/HintButton'
+Vue.component(HintButton.name, HintButton)
+// 引入MockServe.js
+import '../mock/sale/mockSever'
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
